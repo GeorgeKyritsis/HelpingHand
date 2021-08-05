@@ -1,0 +1,213 @@
+<style>
+        ::placeholder{
+            color: #f8f8f8;
+            opacity: .5;
+        }
+        /* Tablets landscape Design */
+        @media  (min-width: 1024px) {
+            
+        }
+        /* Desktop Design */
+        @media only screen and (min-device-width: 1024px) {
+            #form-field{
+                display: grid;
+                grid-template-rows: max-content max-content;
+                grid-auto-columns: 80% 20%;
+                border-bottom: 1px solid #878787 ;
+                width: 100%;
+                /*padding: 0px 0px 0px 0 ;*/
+                margin: auto;
+              	margin-bottom: 0px;
+                grid-template-areas: "head head" "mail btn ";
+            }
+            #sub-form{
+                text-align: left;
+                grid-area: mail;
+                font-family: Manrope;
+                color: #f8f8f8;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: 500;
+                height: 40px !important;
+              	padding: 0;
+              margin-bottom: 0px;
+                border: none;
+            }
+            input#sub-form:focus{
+              	box-shadow: none !important;
+                outline: none;
+                border: none;
+            }
+            #sub-btn{
+                text-align: right;
+                grid-area: btn;
+                justify-content: center;
+                font-family: Manrope;
+                color: #f8f8f8;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: transparent;
+                height: 40px !important;
+              	line-height: normal;
+              	min-height: 0;
+                width:100%;
+              	margin: 0;
+              	padding: 0px 0px 0px 0 ;
+                border: none;
+              	text-transform: none;
+            }
+            #sub-btn:hover{
+                cursor: pointer;
+                color: #FF9800;
+            }
+            #form-field > #form-text{
+                text-align: center;
+                grid-area: head;
+                font-family: Manrope;
+                color: #f8f8f8;
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+        /* Tablets Design */
+        @media (min-device-width: 601px) and (max-width: 1023px){
+          #form-field{
+                display: grid;
+                grid-template-rows: max-content max-content;
+                grid-auto-columns: 80% 20%;
+                border-bottom: 1px solid #878787 ;
+                width: 100%;
+                /*padding: 0px 0px 0px 0 ;*/
+                margin: auto;
+              	margin-bottom: 0px;
+                grid-template-areas: "head head" "mail btn ";
+            }
+            #sub-form{
+                text-align: left;
+                grid-area: mail;
+                font-family: Manrope;
+                color: #f8f8f8;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: 500;
+                height: 40px !important;
+              	padding: 0;
+              margin-bottom: 0px;
+                border: none;
+            }
+            input#sub-form:focus{
+              	box-shadow: none !important;
+                outline: none;
+                border: none;
+            }
+            #sub-btn{
+                text-align: right;
+                grid-area: btn;
+                justify-content: center;
+                font-family: Manrope;
+                color: #f8f8f8;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: transparent;
+                height: 40px !important;
+                width: 100%;
+              	line-height: normal;
+              	min-height: 0;
+              	margin: 0;
+              	padding: 0px 0px 0px 0 ;
+                border: none;
+              	text-transform: none;
+            }
+            #sub-btn:hover{
+                cursor: pointer;
+                color: #FF9800;
+            }
+            #form-field > #form-text{
+                text-align: center;
+                grid-area: head;
+                font-family: Manrope;
+                color: #f8f8f8;
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+        /* Mobile Design */
+        @media (max-width: 600px){
+          #form-field{
+                display: grid;
+                grid-template-rows: max-content max-content;
+                grid-auto-columns: 60% 40%;
+                border-bottom: 1px solid #878787 ;
+                width: 100%;
+                /*padding: 0px 0px 0px 0 ;*/
+                margin: auto;
+              	margin-bottom: 0px;
+                grid-template-areas: "head head" "mail btn ";
+            }
+            #sub-form{
+                text-align: left;
+                grid-area: mail;
+                font-family: Manrope;
+                color: #f8f8f8;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: 500;
+                height: 40px !important;
+              	padding: 0;
+              margin-bottom: 0px;
+                border: none;
+            }
+            input#sub-form:focus{
+              	box-shadow: none !important;
+                outline: none;
+                border: none;
+            }
+            #sub-btn{
+                text-align: right;
+                grid-area: btn;
+                justify-content: right;
+                font-family: Manrope;
+                color: #f8f8f8;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: transparent;
+                height: 40px !important;
+                width: 100%;
+              	line-height: normal;
+              	min-height: 0;
+              	margin: 0;
+              	padding: 0px 0px 0px 0 ;
+                border: none;
+              	text-transform: none;
+            }
+            #sub-btn:hover{
+                cursor: pointer;
+                color: #FF9800;
+            }
+            #form-field > #form-text{
+                text-align: center;
+                grid-area: head;
+                font-family: Manrope;
+                color: #f8f8f8;
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+  
+  		.form-field-active{
+      		border-bottom: 1px solid #f8f8f8 !important;
+  		}
+    </style>
+	<script>
+      $("#sub-form").focusin( function(){
+        $("#form-field").addClass("form-field-active");
+      });
+      $("#sub-form").focusout( function() {
+        $("#form-field").removeClass("form-field-active");
+      });
+	</script>
+<div id="form-field">
+            <!--<p id="form-text">Never miss our offers again</p>-->
+            <input id="sub-form" type="email" name="EMAIL" placeholder="Your email address" required="">
+            <input id="sub-btn" type="submit" value="Subscribe">
+        </div>
